@@ -7,7 +7,6 @@
 ## Lock Analysis (2pt)
 
 No, the new algorithm is not correct.
-
 Without the guard, checking `flag` and setting `flag = 1` are no longer protected as one atomic operation. Two threads can both see `flag == 0` before either one changes it.
 
 Example execution:
